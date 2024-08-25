@@ -14,6 +14,9 @@ export default function HomePage() {
     (message: string, extras: ChatAdapterExtras): Promise<string> => {
       return fetch('http://localhost:5000/generate', {
         method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
         body: JSON.stringify({ message })
       })
         .then(response => response.json())
