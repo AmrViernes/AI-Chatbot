@@ -25,16 +25,16 @@ export default function HomePage() {
   );
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-slate-50">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-slate-200">
       <PageHeader />
       <div className="aiChat-container">
         <AiChat
           adapter={myCustomAdapter}
           personaOptions={{
             assistant: {
-              name: "Hospital Customer Care Assistant",
+              name: "AI Assistant",
               avatar:
-                "https://www.logolynx.com/images/logolynx/85/856586486a2bba6f02e064757e495c9d.png",
+                "https://www.pngall.com/wp-content/uploads/2018/05/Doctor-High-Quality-PNG.png",
               tagline: "How may I assist you today?",
             },
             user: {
@@ -45,6 +45,7 @@ export default function HomePage() {
           displayOptions={{
             width: 1000,
             height: 500,
+            colorScheme: "light",
           }}
         />
       </div>
