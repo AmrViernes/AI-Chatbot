@@ -11,8 +11,8 @@ export default function HomePage() {
   // We transform the streamText function into an adapter that <AiChat /> can use
   //const chatAdapter = useAsStreamAdapter(streamText);
   const myCustomAdapter = useAsBatchAdapter(
-    (message: string, extras: ChatAdapterExtras): Promise<string> => {
-      return fetch('http://localhost:5000/generate', {
+    async (message: string, extras: ChatAdapterExtras): Promise<string> => {
+      return await fetch('http://localhost:5000/generate', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
